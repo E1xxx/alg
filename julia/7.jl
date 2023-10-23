@@ -1,9 +1,9 @@
 function find_passage(r::Robot)
-    n=0; 
+    num_steps=0; 
     side=Ost
     while isborder(r,Nord)==true 
-        n+=1
-        moves!(r,side,n)
+        num_steps+=1
+        moves!(r,side,num_steps)
         side=inverse(side)
     end
 end
